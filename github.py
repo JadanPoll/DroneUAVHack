@@ -597,7 +597,7 @@ select=1
 
 
 
-class YourClass:
+class JEncoder:
     def __init__(self):
         self.salmon = b""  # Initialize salmon as empty bytes
         self.payload_raw_list = []  # Initialize payload_raw_list
@@ -771,8 +771,8 @@ cap.release()
 if __name__ == "__main__":
 
     # Example usage
-    your_instance = YourClass()
-    your_instance.select_file_and_collate_bytes()
+    jpeg_encoder = JEncoder()
+    jpeg_encoder.select_file_and_collate_bytes()
     
 
 
@@ -811,7 +811,7 @@ if __name__ == "__main__":
     # Collating Image Frames
     image_frame_array = []
     print("Started Processing Frames")
-    for data in your_instance.get_collated_bytes():
+    for data in jpeg_encoder.get_collated_bytes():
 
         total_bytes = bytearray()
         total_bytes.extend(image_bytes)  # Start of Image and segments
